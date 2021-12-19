@@ -1,13 +1,6 @@
-## Google top searches in Germany
-![Alt Text](/maps/Germany/topsearch.gif)
+# Google-Trends
+![Alt Text](topsearch.gif)
 
-## Google top searches in Sweden
-![Alt Text](/maps/Sweden/topsearch.gif)
-
-## Google top searches in France
-![Alt Text](/maps/France/topsearch.gif)
-
-# Google-Trends 
 Both a notebook and a python script that can generate top searches for a specific country during chosen year interval.
 
 #### Python script
