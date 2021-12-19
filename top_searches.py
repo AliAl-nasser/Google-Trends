@@ -11,7 +11,7 @@ list_of_years = []
 
 def get_dataframe(geo_code, start_year, end_year):
     frames = []
-    for i in range(start_year, end_year+1):
+    for i in range(start_year, end_year + 1):
         list_of_years.append(str(i))
         colors = []
         for j in range(0, 10):
@@ -33,7 +33,7 @@ def main(country, geo_code, start_year, end_year):
     output_path = 'maps'
     final_directory = os.path.join(output_path, str(tmp))
     if not os.path.exists(final_directory):
-       os.makedirs(final_directory)
+        os.makedirs(final_directory)
     result = get_dataframe(geo_code, start_year, end_year)
     for year in list_of_years:
         df = result.loc[result['year'] == year]
@@ -58,6 +58,7 @@ def main(country, geo_code, start_year, end_year):
             filepath = os.path.join(final_directory, str(year) + str(string) + '.png')
             top_search = fig.get_figure()
             top_search.savefig(filepath, dpi=300)
+
 
 if __name__ == '__main__':
     main(sys.argv[1], sys.argv[2], int(sys.argv[3]), int(sys.argv[4]))
