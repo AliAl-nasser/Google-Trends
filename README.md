@@ -1,5 +1,5 @@
 # Google-Trends
-![Alt Text](topsearch.gif)
+![Alt Text](top_search.gif)
 
 Both a notebook and a python script that can generate top searches for a specific country during chosen year interval.
 
