@@ -8,35 +8,41 @@ import sys
 pytrends = TrendReq(hl='en-US', tz=360)
 list_of_years = []
 
-
-def get_dataframe(geo_code, start_year, end_year):
-    frames = []
-    for i in range(start_year, end_year + 1):
-        list_of_years.append(str(i))
+def to_csv(country, geo_code, start_year, end_year):
+    #TODO fix IndexError: list index out of range for some countries
+    path = 'datasets' 
+    for i in range(start_year, end_year+1):
+        list_of_years.append(i)
+        print(i)
         colors = []
         for j in range(0, 10):
             hexadecimal = "#" + ''.join([random.choice('ABCDEF0123456789') for k in range(6)])
             colors.append(hexadecimal)
-        year = i
-        i = pytrends.top_charts(i, hl='en-US', tz=300, geo=geo_code)
-        i.rename(columns={'exploreQuery': 'year'}, inplace=True)
-        i["year"].replace({"": str(year)}, inplace=True)
-        i['color'] = colors
-        frames.append(i)
+        df=pytrends.top_charts(i, hl='en-US', tz=360, geo=geo_code)
+        df.drop('exploreQuery', axis=1, inplace=True)
+        df["year"]  = i
+        df['color'] = colors
+        filepath = os.path.join(path, str(country) + '.csv')
+        if i == start_year:
+            df.to_csv(filepath, encoding='utf-8', index=False, mode='w')
+        else:
+            df.to_csv(filepath, encoding='utf-8', index=False, mode='a')
 
-    result = pd.concat(frames)
-    return result
 
+def get_dataframe(filename):
+    dataframe=pd.read_csv(filename)
+    return dataframe
 
 def main(country, geo_code, start_year, end_year):
     tmp = country.strip('" "')
+    to_csv(tmp, geo_code, start_year, end_year)
     output_path = 'maps'
     final_directory = os.path.join(output_path, str(tmp))
     if not os.path.exists(final_directory):
-        os.makedirs(final_directory)
-    result = get_dataframe(geo_code, start_year, end_year)
+       os.makedirs(final_directory)
+    result = get_dataframe('datasets/'+str(tmp)+'.csv')
     for year in list_of_years:
-        df = result.loc[result['year'] == year]
+        df = result.loc[result['year'] == str(year)]
         title = df['title'].tolist()
         color = df['color'].tolist()
         for string, color in zip(title, color):
@@ -55,6 +61,8 @@ def main(country, geo_code, start_year, end_year):
                          xy=(0.1, .65), xycoords='figure fraction',
                          horizontalalignment='left', verticalalignment='top',
                          fontsize=20)
+            if "/" in string:
+                string = string.replace("/","-")
             filepath = os.path.join(final_directory, str(year) + str(string) + '.png')
             top_search = fig.get_figure()
             top_search.savefig(filepath, dpi=300)
