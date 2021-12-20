@@ -5,24 +5,31 @@ import random
 import os
 import sys
 
-pytrends = TrendReq(hl='en-US', tz=360)
-list_of_years = []
+pytrends = TrendReq(hl='en-US', tz=360, timeout=(10,25))
 
 def to_csv(country, geo_code, start_year, end_year):
-    #TODO fix IndexError: list index out of range for some countries
-    path = 'datasets' 
+    path = 'datasets'
+    filepath = os.path.join(path, str(country) + '.csv')
+    if os.path.exists(filepath):
+        return 
+        
     for i in range(start_year, end_year+1):
-        list_of_years.append(i)
         print(i)
         colors = []
         for j in range(0, 10):
             hexadecimal = "#" + ''.join([random.choice('ABCDEF0123456789') for k in range(6)])
             colors.append(hexadecimal)
-        df=pytrends.top_charts(i, hl='en-US', tz=360, geo=geo_code)
+            
+        try:
+            df=pytrends.top_charts(i, hl='en-US', tz=360, geo=geo_code)
+        except IndexError:
+            print("error")
+            i += 1
+            df = pytrends.top_charts(i, hl='en-US', tz=360, geo=geo_code)
+        
         df.drop('exploreQuery', axis=1, inplace=True)
         df["year"]  = i
         df['color'] = colors
-        filepath = os.path.join(path, str(country) + '.csv')
         if i == start_year:
             df.to_csv(filepath, encoding='utf-8', index=False, mode='w')
         else:
@@ -34,6 +41,9 @@ def get_dataframe(filename):
     return dataframe
 
 def main(country, geo_code, start_year, end_year):
+    list_of_years = []
+    for i in range(start_year, end_year+1):
+        list_of_years.append(i)
     tmp = country.strip('" "')
     to_csv(tmp, geo_code, start_year, end_year)
     output_path = 'maps'
@@ -47,8 +57,8 @@ def main(country, geo_code, start_year, end_year):
         color = df['color'].tolist()
         for string, color in zip(title, color):
             world = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
-            se = world.query('name ==' + country)
-            fig = se.plot(figsize=(10, 10), color=color)
+            country_map = world.query('name ==' + country)
+            fig = country_map.plot(figsize=(10, 10), color=color)
             fig.set_title('Top Google searches ' + str(start_year) + '-' + str(end_year) + ' in ' + str(tmp),
                           fontdict={'fontsize': '25',
                                     'fontweight': '3'})

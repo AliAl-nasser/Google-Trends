@@ -1,33 +1,121 @@
 title,year,color
-Breaking Dawn,2011,#B02E0A
-Final Destination 5,2011,#49187D
-Mean Girls 2,2011,#0DC6D2
-True Grit,2011,#56E11B
-Conan The Barbarian,2011,#301E2B
-Scream 4,2011,#C64777
-The Inbetweeners,2011,#EBCA36
-Little Fockers,2011,#1A5746
-Transformers 3,2011,#19E368
-Unstoppable,2011,#8EC1AC
+Breaking Dawn,2011,#FB1075
+Final Destination 5,2011,#359508
+Mean Girls 2,2011,#AB13B4
+True Grit,2011,#7D8688
+Conan The Barbarian,2011,#72AA44
+Scream 4,2011,#68E211
+The Inbetweeners,2011,#18F3AA
+Little Fockers,2011,#5F8DA4
+Transformers 3,2011,#9F0E9F
+Unstoppable,2011,#6F04E0
 title,year,color
-Stella McCartney,2012,#4B051A
-Karl Lagerfeld,2012,#DF4E61
-Victoria's Secret,2012,#83556B
-Alice Temperley,2012,#807B47
-Versace,2012,#C5A63B
-Mulberry,2012,#6951AB
-Marks and Spencer,2012,#1FA4C9
-Ossie Clark,2012,#D9965B
-Burberry,2012,#E7B6EB
-LK Bennett,2012,#9940BC
+Stella McCartney,2012,#0A20CA
+Karl Lagerfeld,2012,#2423A7
+Victoria's Secret,2012,#1CAF77
+Alice Temperley,2012,#5CAD78
+Versace,2012,#AFEA86
+Mulberry,2012,#AA4355
+Marks and Spencer,2012,#99D6BF
+Ossie Clark,2012,#CC4023
+Burberry,2012,#58E5B5
+LK Bennett,2012,#C5A3E0
 title,year,color
-Grand National,2013,#A560CA
-Wimbledon,2013,#A7FDB7
-Eurovision,2013,#99032A
-Confederations Cup,2013,#E2A3C7
-The Oscars,2013,#E4DCB7
-Red Nose Day,2013,#B57262
-Glastonbury,2013,#2647BA
-Lovebox,2013,#77F52A
-Brit Awards,2013,#3BB18B
-The Ashes,2013,#A1F95E
+Grand National,2013,#6C1A64
+Wimbledon,2013,#4D8823
+Eurovision,2013,#412FCA
+Confederations Cup,2013,#C8C19B
+The Oscars,2013,#F52D21
+Red Nose Day,2013,#DF3C07
+Glastonbury,2013,#03E9BA
+Lovebox,2013,#684C4F
+Brit Awards,2013,#079F6B
+The Ashes,2013,#6691F2
+title,year,color
+Cilla Black,2015,#89CD7B
+Lady Colin Campbell,2015,#8E30B8
+Anne Kirkbride,2015,#1A417A
+Adele,2015,#6E82CE
+Caitlyn Jenner,2015,#C11039
+Ruby Rose,2015,#24A0E2
+Katie Hopkins,2015,#FBD0D0
+Madonna,2015,#1C0A95
+Bobbi Kristina Brown,2015,#459FDB
+Rita Ora,2015,#517660
+title,year,color
+Cilla Black,2015,#911BEC
+Lady Colin Campbell,2015,#8775D1
+Anne Kirkbride,2015,#3EB550
+Adele,2015,#2C0E93
+Caitlyn Jenner,2015,#500496
+Ruby Rose,2015,#CFE528
+Katie Hopkins,2015,#E388DB
+Madonna,2015,#4E295F
+Bobbi Kristina Brown,2015,#58C64C
+Rita Ora,2015,#EC232F
+title,year,color
+Euro2016,2016,#89AFAD
+Pokemon Go,2016,#B83A63
+David Bowie,2016,#6D4A0D
+Donald Trump,2016,#C6555A
+Prince,2016,#A99327
+EU referendum,2016,#BC681C
+Alan Rickman,2016,#FA5C82
+Olympics,2016,#32CD1C
+US election,2016,#6FB76C
+Deadpool,2016,#CE2095
+title,year,color
+Meghan Markle,2017,#B0DEBE
+iPhone 8,2017,#3A57A2
+Hurricane Irma,2017,#E954AC
+Fidget spinner,2017,#AD39E2
+Manchester bombing,2017,#B1B1F0
+Grenfell Tower,2017,#0A365E
+13 Reasons Why,2017,#D84F39
+Tara Palmer Tomkinson,2017,#8C1C2A
+Shannon Matthews,2017,#669EC6
+iPhone X,2017,#C2CBB6
+title,year,color
+World Cup,2018,#B843DF
+Meghan Markle,2018,#F16D8E
+Royal Wedding,2018,#2DD5B4
+Black Panther,2018,#E0E792
+Roxanne Pallett,2018,#DB2BAE
+Fortnite,2018,#D2CA4B
+Demi Lovato,2018,#37E5CF
+Ant McPartlin,2018,#531128
+A Star Is Born,2018,#5726B1
+Khloe Kardashian,2018,#6E6A61
+title,year,color
+Rugby World Cup,2019,#0D063B
+Cricket World Cup,2019,#C9323C
+Game of Thrones,2019,#75DA44
+Chernobyl,2019,#3CF756
+Thanos,2019,#F66EF1
+Notre Dame,2019,#E77274
+Avengers Endgame,2019,#795BC9
+iPhone 11,2019,#5501D8
+Caitlyn Jenner,2019,#C502CE
+Joker,2019,#E58F3F
+title,year,color
+Coronavirus,2020,#22D65D
+US election,2020,#BA963F
+Caroline Flack,2020,#1F040E
+Coronavirus symptoms,2020,#41A16E
+Coronavirus update,2020,#03601C
+Premier League,2020,#29F417
+Boris Johnson,2020,#BE975B
+Eat Out to Help Out,2020,#1008ED
+Kobe Bryant,2020,#067AC0
+Kim Jong-un,2020,#E557B6
+title,year,color
+Euros,2021,#5259CA
+Premier League,2021,#FEB3BE
+Christian Eriksen,2021,#B72604
+Covid vaccine,2021,#0BDAC0
+Prince Philip,2021,#1359E1
+Matt Hancock,2021,#CC16A0
+Emma Raducanu,2021,#0290B3
+Sarah Everard,2021,#B7E59D
+England vs Denmark,2021,#B9CEF9
+Sean Lock,2021,#1DB501
